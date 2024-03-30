@@ -8,12 +8,29 @@ function saveData() {
     localStorage.setItem("data",listContainer.innerHTML)
 }
 function addTask() {
-    if (inputBox.value=== "") {
-        //TODO:make the alert more cooler
-        alert('you must write something');
+    if (inputBox.value === "") {
+        let cover = document.createElement("div");
+        cover.classList.add("del_cla");
+        cover.className = "alert_cover";
+        let note_Page = document.createElement("div");
+        note_Page.className = "alert";
+        note_Page.classList.add("del_cla");
+        let alert_icon = document.createElement("i");
+        cover.classList.add("del_cla");
+        alert_icon.className = "fa-solid fa-circle-exclamation";
+        let herder_text =  document.createElement("h2");
+        herder_text.classList.add("del_cla");
+        herder_text.textContent = "You have to write something to add a task.";
+        let litel_note = document.createElement("amall");
+        litel_note.classList.add("del_cla");
+        litel_note.innerHTML = `Click at any plase to romove the alert <i class="fa-solid fa-face-smile-beam"></i>.`;
+        note_Page.appendChild(alert_icon);
+        note_Page.appendChild(herder_text);
+        note_Page.appendChild(litel_note);
+        cover.appendChild(note_Page);
+        document.body.appendChild(cover);
     }
     else{
-        //FIXME: dont let the text go out of the border
         let li = document.createElement("li");
         let check_icon = document.createElement("i");
         let del_icon = document.createElement("i");
@@ -35,7 +52,6 @@ function addTask() {
 addButton.addEventListener("click",addTask);
 
 listContainer.addEventListener("click",function(e){
-    //FIXME: make the check box working and no line inthe midel
     if (e.target.classList.contains("check_box")) {
         if (e.target.classList.contains("fa-square")) {
             e.target.classList.remove("fa-regular");
@@ -56,3 +72,8 @@ listContainer.addEventListener("click",function(e){
         saveData();
     }
 },false);
+document.body.addEventListener("click",function(e){
+    if(e.target.classList.contains("del_cla")){
+        document.querySelector(".alert_cover").remove();
+    }
+},false)
