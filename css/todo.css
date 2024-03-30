@@ -70,24 +70,18 @@ ul li {
   position: relative;
   display: grid;
   grid-template-columns: 5% 90% 5%;
-  /* margin-bottom: 5px; */
+  margin-bottom: 5px;
 }
-/* li i:last-child{
-    color: #f12711;
-} */
 li i:last-child:hover{
     color: #f12711;
 }
-/* ul li::before{
-    content: "";
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    top: 12px;
-    left: 8px;
-    background-color: #113e4f;
-    border-radius: 50%;
-} */
 .checked {
   text-decoration: line-through;
 }
+.fa-square-check{
+    color:#0c7269 ;
+}
+/* p{
+    background-color: #f12711;
+    text-wrap: wrap;
+} */
