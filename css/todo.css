@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-color: #136a8a;
+  min-height: 100vh;
+  padding: 10px;
+}
+.to_do_list {
+  width: 100%;
+  max-width: 540px;
+  background-color: aliceblue;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.to_do_list h2 {
+  color: #113e4f;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #11998e;
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+    background: linear-gradient(to right, #38ef7d, #11998e);
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 16px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    transition: 0.3s;
+}
+button:hover {
+    background: #0c7269;
+    background: -webkit-linear-gradient(to right, #2bb15e, #0c7169);
+    background: linear-gradient(to right, #2bb15e, #0c7169);
+    color: white;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 12px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  /* margin-bottom: 5px; */
+}
+/* li i:last-child{
+    color: #f12711;
+} */
+li i:last-child:hover{
+    color: #f12711;
+}
+/* ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    top: 12px;
+    left: 8px;
+    background-color: #113e4f;
+    border-radius: 50%;
+} */
+.checked {
+  text-decoration: line-through;
+}
