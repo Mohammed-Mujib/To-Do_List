@@ -87,6 +87,11 @@ li i:last-child:hover {
 ul li p {
   overflow-wrap: initial;
   text-align: left;
+  font-size: 15px;
+}
+ul li p::first-letter{
+    text-transform: uppercase;
+
 }
 .alert_cover {
   width: 100%;
